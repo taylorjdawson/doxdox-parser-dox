@@ -56,7 +56,7 @@ const parser = (content, filename) =>
             'raw': true,
             'skipSingleStar': true
         })
-        .filter(method => !method.ignore && method.ctx)
+        .filter(method => !method.ignore && !method.isPrivate && method.ctx)
         .map(method => ({
             'uid': formatStringForUID(`${filename}-${method.ctx.string}`),
             'isPrivate': method.isPrivate,
