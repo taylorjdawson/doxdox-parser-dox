@@ -61,7 +61,7 @@ const parser = (content, filename) =>
             'uid': formatStringForUID(`${filename}-${method.ctx.string}`),
             'isPrivate': method.isPrivate,
             'type': method.ctx.type,
-            'name': formatStringForName(method.ctx.string),
+            'name': method.ctx.name,
             'description': method.description.full,
             'empty': !method.description.full && !method.tags.length,
             'params': method.tags
